@@ -7,7 +7,7 @@
 <br>
 <i><b>Fecha: </b>12/03/2023
 <br>
-<b>Ciencias de la computación e Inteligencia Artificial</b></i>
+<b>Ciencias  de la computación e Inteligencia Artificial</b></i>
 <br>
 </FONT>
 </p>
