@@ -10,7 +10,6 @@ def test_apps_download(mocker):
     assert html 
 
 def test_apps_get_file_name(): 
-    
     now = datetime.datetime.now()
     file_name = now.strftime("%Y-%m-%d") + ".html"
     
