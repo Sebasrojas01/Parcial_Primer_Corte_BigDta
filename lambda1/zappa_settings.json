@@ -10,11 +10,8 @@
         "manage_roles": false,
         "apigateway_enabled": false,
         "events": [{
-            "function": "apps.f"
-        //    "expression": "cron(0 9 ? * MON *)"
+            "function": "apps.f",
+            "expression": "cron(0 9 ? * MON *)"
         }]
-
-        
-        
     }
 }
