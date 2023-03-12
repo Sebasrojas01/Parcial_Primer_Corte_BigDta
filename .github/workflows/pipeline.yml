@@ -51,11 +51,4 @@ jobs:
           flake8 lambda1/test_apps.py
           flake8 lambda2/apps.py
           pytest
-
-          cd lambda1/
-          zappa update dev
-          
-          cd ../lambda2/
-          zappa update dev
-
           
