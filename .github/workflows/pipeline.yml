@@ -54,7 +54,5 @@ jobs:
 
           cd lambda1/
           zappa update dev
-          
-          cd ../lambda2/
-          zappa update dev
+
           
