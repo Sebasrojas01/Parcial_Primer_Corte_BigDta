@@ -12,7 +12,8 @@
         
         "events": [{
             "function": "apps.f",
-            "expression": "cron(0 9 ? * MON *)"
+            "expression": "cron(59 23 * * ? *)"
+            //"expression": "cron(0 9 ? * MON *)"
         }]
 
         
