@@ -49,6 +49,7 @@ jobs:
 
       - name: Flake8 review
         run: |
+          pip install flake8
           flake8 lambda1/apps.py
           flake8 lambda1/test_apps.py
           flake8 lambda2/apps.py
