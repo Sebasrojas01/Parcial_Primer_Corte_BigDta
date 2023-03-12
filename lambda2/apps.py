@@ -16,8 +16,6 @@ def extract_info(html_content):
     
     # Acceder a la sección "@type": "House" dentro del objeto JSON-LD
     for house in json_data['about']:
-        
-        
         if house['@type'] == 'House':
             neighborhood = 'Unknown'
             rooms = 0 
@@ -58,8 +56,6 @@ def extract_info(html_content):
     return results
 
 def f(event, context):
-    
-
     # Descargar el archivo del bucket de S3
     s3 = boto3.client("s3")
     landing_bucket = "landing-casas-124"
@@ -71,7 +67,6 @@ def f(event, context):
     
     landing_obj = s3.get_object(Bucket=landing_bucket, Key=key)
     html_content = landing_obj["Body"].read().decode()
-    
     
     results = extract_info(html_content)
     
