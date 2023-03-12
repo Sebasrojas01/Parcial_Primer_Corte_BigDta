@@ -31,7 +31,7 @@ jobs:
       - name: Listar archivos
         run: |
           ls
-          pwd
+    
       - name: Install virtualenv and executed pytest
         run: |
           pip install virtualenv
@@ -46,3 +46,13 @@ jobs:
          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY_ID}}
          aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
          aws-region: us-east-1
+
+      - name: Flake8 review
+        run: |
+          flake8 lambda1/apps.py
+          flake8 lambda1/test_apps.py
+          flake8 lambda2/apps.py
+          
+      - name: Pytest tes
+        run: |
+          pytest
