@@ -39,14 +39,6 @@ jobs:
           source env/bin/activate
           pip install -r requeriments.txt
           
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-         aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
-         aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY_ID}}
-         aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
-         aws-region: us-east-1
-
       - name: Flake8 review
         run: |
           pip install flake8
@@ -56,4 +48,13 @@ jobs:
           
       - name: Pytest tes
         run: |
+          pip install pytest
           pytest
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+         aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
+         aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY_ID}}
+         aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
+         aws-region: us-east-1
