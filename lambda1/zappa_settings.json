@@ -8,12 +8,10 @@
         "role_name": "LabRole",
         "keep_warm": false,
         "manage_roles": false,
-        "apigateway_enabled": false, 
-        
+        "apigateway_enabled": false,
         "events": [{
             "function": "apps.f",
-            "expression": "cron(59 23 * * ? *)"
-            //"expression": "cron(0 9 ? * MON *)"
+            "expression": "cron(0 9 ? * MON *)"
         }]
 
         
