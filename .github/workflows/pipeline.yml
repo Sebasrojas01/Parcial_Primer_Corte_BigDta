@@ -52,7 +52,8 @@ jobs:
           pytest
 
           cd lambda1/
-          zappa ubdate dev
-          cd ../lambda1/
+          zappa update dev
+          
+          cd ../lambda2/
           zappa update dev
           
